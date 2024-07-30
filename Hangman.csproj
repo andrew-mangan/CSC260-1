@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Image1.jpg" />
+    <None Include="Step4.jpg" />
+    <None Include="Step3.jpg" />
+    <None Include="Step2.jpg" />
     <None Include="Step1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

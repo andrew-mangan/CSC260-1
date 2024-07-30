@@ -1,0 +1,10 @@
+H:\Schoole\CSC 260\CSC260\bin\Debug\Hangman.exe.config
+H:\Schoole\CSC 260\CSC260\bin\Debug\Hangman.exe
+H:\Schoole\CSC 260\CSC260\bin\Debug\Hangman.pdb
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.csproj.AssemblyReference.cache
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.Form1.resources
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.Properties.Resources.resources
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.csproj.GenerateResource.cache
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.csproj.CoreCompileInputs.cache
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.exe
+H:\Schoole\CSC 260\CSC260\obj\Debug\Hangman.pdb
