@@ -38,18 +38,18 @@
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonA = new System.Windows.Forms.Button();
+            this.ptb11 = new System.Windows.Forms.PictureBox();
+            this.ptb10 = new System.Windows.Forms.PictureBox();
+            this.ptb9 = new System.Windows.Forms.PictureBox();
+            this.ptb8 = new System.Windows.Forms.PictureBox();
+            this.ptb7 = new System.Windows.Forms.PictureBox();
+            this.ptb6 = new System.Windows.Forms.PictureBox();
+            this.ptb5 = new System.Windows.Forms.PictureBox();
+            this.ptb4 = new System.Windows.Forms.PictureBox();
+            this.ptb3 = new System.Windows.Forms.PictureBox();
+            this.ptb2 = new System.Windows.Forms.PictureBox();
+            this.ptb1 = new System.Windows.Forms.PictureBox();
+            this.btnA = new System.Windows.Forms.Button();
             this.btnB = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
@@ -76,20 +76,29 @@
             this.btnY = new System.Windows.Forms.Button();
             this.btnZ = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,17 +195,17 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.White;
-            this.groupBox3.Controls.Add(this.pictureBox11);
-            this.groupBox3.Controls.Add(this.pictureBox10);
-            this.groupBox3.Controls.Add(this.pictureBox9);
-            this.groupBox3.Controls.Add(this.pictureBox8);
-            this.groupBox3.Controls.Add(this.pictureBox7);
-            this.groupBox3.Controls.Add(this.pictureBox6);
-            this.groupBox3.Controls.Add(this.pictureBox5);
-            this.groupBox3.Controls.Add(this.pictureBox4);
-            this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Controls.Add(this.pictureBox2);
-            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.ptb11);
+            this.groupBox3.Controls.Add(this.ptb10);
+            this.groupBox3.Controls.Add(this.ptb9);
+            this.groupBox3.Controls.Add(this.ptb8);
+            this.groupBox3.Controls.Add(this.ptb7);
+            this.groupBox3.Controls.Add(this.ptb6);
+            this.groupBox3.Controls.Add(this.ptb5);
+            this.groupBox3.Controls.Add(this.ptb4);
+            this.groupBox3.Controls.Add(this.ptb3);
+            this.groupBox3.Controls.Add(this.ptb2);
+            this.groupBox3.Controls.Add(this.ptb1);
             this.groupBox3.Location = new System.Drawing.Point(201, 35);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(300, 304);
@@ -204,116 +213,118 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // pictureBox11
+            // ptb11
             // 
-            this.pictureBox11.Image = global::Hangman.Properties.Resources.Step4;
-            this.pictureBox11.Location = new System.Drawing.Point(190, 206);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(52, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 17;
-            this.pictureBox11.TabStop = false;
+            this.ptb11.Image = global::Hangman.Properties.Resources.Step4;
+            this.ptb11.Location = new System.Drawing.Point(190, 206);
+            this.ptb11.Name = "ptb11";
+            this.ptb11.Size = new System.Drawing.Size(52, 50);
+            this.ptb11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb11.TabIndex = 17;
+            this.ptb11.TabStop = false;
             // 
-            // pictureBox10
+            // ptb10
             // 
-            this.pictureBox10.Image = global::Hangman.Properties.Resources.Step3;
-            this.pictureBox10.Location = new System.Drawing.Point(137, 209);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(53, 47);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 16;
-            this.pictureBox10.TabStop = false;
+            this.ptb10.Image = global::Hangman.Properties.Resources.Step3;
+            this.ptb10.Location = new System.Drawing.Point(137, 209);
+            this.ptb10.Name = "ptb10";
+            this.ptb10.Size = new System.Drawing.Size(53, 47);
+            this.ptb10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb10.TabIndex = 16;
+            this.ptb10.TabStop = false;
             // 
-            // pictureBox9
+            // ptb9
             // 
-            this.pictureBox9.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox9.Location = new System.Drawing.Point(195, 144);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(58, 10);
-            this.pictureBox9.TabIndex = 15;
-            this.pictureBox9.TabStop = false;
+            this.ptb9.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb9.Location = new System.Drawing.Point(195, 144);
+            this.ptb9.Name = "ptb9";
+            this.ptb9.Size = new System.Drawing.Size(58, 10);
+            this.ptb9.TabIndex = 15;
+            this.ptb9.TabStop = false;
             // 
-            // pictureBox8
+            // ptb8
             // 
-            this.pictureBox8.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox8.Location = new System.Drawing.Point(137, 144);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(52, 10);
-            this.pictureBox8.TabIndex = 14;
-            this.pictureBox8.TabStop = false;
+            this.ptb8.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb8.Location = new System.Drawing.Point(137, 144);
+            this.ptb8.Name = "ptb8";
+            this.ptb8.Size = new System.Drawing.Size(52, 10);
+            this.ptb8.TabIndex = 14;
+            this.ptb8.TabStop = false;
             // 
-            // pictureBox7
+            // ptb7
             // 
-            this.pictureBox7.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox7.Location = new System.Drawing.Point(185, 117);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(10, 103);
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
+            this.ptb7.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb7.Location = new System.Drawing.Point(185, 117);
+            this.ptb7.Name = "ptb7";
+            this.ptb7.Size = new System.Drawing.Size(10, 103);
+            this.ptb7.TabIndex = 13;
+            this.ptb7.TabStop = false;
             // 
-            // pictureBox6
+            // ptb6
             // 
-            this.pictureBox6.Image = global::Hangman.Properties.Resources.Step21;
-            this.pictureBox6.Location = new System.Drawing.Point(169, 81);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(44, 40);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
+            this.ptb6.Image = global::Hangman.Properties.Resources.Step21;
+            this.ptb6.Location = new System.Drawing.Point(169, 81);
+            this.ptb6.Name = "ptb6";
+            this.ptb6.Size = new System.Drawing.Size(44, 40);
+            this.ptb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptb6.TabIndex = 12;
+            this.ptb6.TabStop = false;
             // 
-            // pictureBox5
+            // ptb5
             // 
-            this.pictureBox5.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox5.Location = new System.Drawing.Point(185, 34);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(10, 50);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
+            this.ptb5.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb5.Location = new System.Drawing.Point(185, 34);
+            this.ptb5.Name = "ptb5";
+            this.ptb5.Size = new System.Drawing.Size(10, 50);
+            this.ptb5.TabIndex = 11;
+            this.ptb5.TabStop = false;
             // 
-            // pictureBox4
+            // ptb4
             // 
-            this.pictureBox4.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox4.Location = new System.Drawing.Point(113, 34);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 10);
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
+            this.ptb4.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb4.Location = new System.Drawing.Point(113, 34);
+            this.ptb4.Name = "ptb4";
+            this.ptb4.Size = new System.Drawing.Size(80, 10);
+            this.ptb4.TabIndex = 10;
+            this.ptb4.TabStop = false;
             // 
-            // pictureBox3
+            // ptb3
             // 
-            this.pictureBox3.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox3.Location = new System.Drawing.Point(68, 34);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 10);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.ptb3.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb3.Location = new System.Drawing.Point(68, 34);
+            this.ptb3.Name = "ptb3";
+            this.ptb3.Size = new System.Drawing.Size(62, 10);
+            this.ptb3.TabIndex = 9;
+            this.ptb3.TabStop = false;
             // 
-            // pictureBox2
+            // ptb2
             // 
-            this.pictureBox2.Image = global::Hangman.Properties.Resources.Step1;
-            this.pictureBox2.Location = new System.Drawing.Point(61, 34);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(10, 224);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.ptb2.Image = global::Hangman.Properties.Resources.Step1;
+            this.ptb2.Location = new System.Drawing.Point(61, 34);
+            this.ptb2.Name = "ptb2";
+            this.ptb2.Size = new System.Drawing.Size(10, 224);
+            this.ptb2.TabIndex = 8;
+            this.ptb2.TabStop = false;
             // 
-            // pictureBox1
+            // ptb1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 254);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 10);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.ptb1.Image = ((System.Drawing.Image)(resources.GetObject("ptb1.Image")));
+            this.ptb1.Location = new System.Drawing.Point(22, 254);
+            this.ptb1.Name = "ptb1";
+            this.ptb1.Size = new System.Drawing.Size(84, 10);
+            this.ptb1.TabIndex = 7;
+            this.ptb1.TabStop = false;
             // 
-            // buttonA
+            // btnA
             // 
-            this.buttonA.Location = new System.Drawing.Point(21, 23);
-            this.buttonA.Name = "buttonA";
-            this.buttonA.Size = new System.Drawing.Size(31, 30);
-            this.buttonA.TabIndex = 10;
-            this.buttonA.Text = "A";
-            this.buttonA.UseVisualStyleBackColor = true;
+            this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnA.Location = new System.Drawing.Point(21, 23);
+            this.btnA.Name = "btnA";
+            this.btnA.Size = new System.Drawing.Size(31, 30);
+            this.btnA.TabIndex = 10;
+            this.btnA.Text = "A";
+            this.btnA.UseVisualStyleBackColor = true;
+            this.btnA.Click += new System.EventHandler(this.btnA_Click);
             // 
             // btnB
             // 
@@ -323,6 +334,7 @@
             this.btnB.TabIndex = 11;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = true;
+            this.btnB.Click += new System.EventHandler(this.btnB_Click);
             // 
             // btnC
             // 
@@ -332,6 +344,7 @@
             this.btnC.TabIndex = 12;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnD
             // 
@@ -341,6 +354,7 @@
             this.btnD.TabIndex = 13;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = true;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // btnE
             // 
@@ -350,6 +364,7 @@
             this.btnE.TabIndex = 14;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // btnF
             // 
@@ -359,6 +374,7 @@
             this.btnF.TabIndex = 15;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = true;
+            this.btnF.Click += new System.EventHandler(this.btnF_Click);
             // 
             // btnG
             // 
@@ -368,6 +384,7 @@
             this.btnG.TabIndex = 16;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = true;
+            this.btnG.Click += new System.EventHandler(this.btnG_Click);
             // 
             // btnH
             // 
@@ -377,6 +394,7 @@
             this.btnH.TabIndex = 17;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = true;
+            this.btnH.Click += new System.EventHandler(this.btnH_Click);
             // 
             // btnI
             // 
@@ -386,6 +404,7 @@
             this.btnI.TabIndex = 18;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = true;
+            this.btnI.Click += new System.EventHandler(this.btnI_Click);
             // 
             // btnJ
             // 
@@ -395,6 +414,7 @@
             this.btnJ.TabIndex = 19;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = true;
+            this.btnJ.Click += new System.EventHandler(this.btnJ_Click);
             // 
             // btnK
             // 
@@ -404,6 +424,7 @@
             this.btnK.TabIndex = 20;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = true;
+            this.btnK.Click += new System.EventHandler(this.btnK_Click);
             // 
             // btnL
             // 
@@ -413,6 +434,7 @@
             this.btnL.TabIndex = 21;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = true;
+            this.btnL.Click += new System.EventHandler(this.btnL_Click);
             // 
             // btnM
             // 
@@ -422,6 +444,7 @@
             this.btnM.TabIndex = 22;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = true;
+            this.btnM.Click += new System.EventHandler(this.btnM_Click);
             // 
             // btnN
             // 
@@ -431,6 +454,7 @@
             this.btnN.TabIndex = 23;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = true;
+            this.btnN.Click += new System.EventHandler(this.btnN_Click);
             // 
             // btnO
             // 
@@ -440,6 +464,7 @@
             this.btnO.TabIndex = 24;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = true;
+            this.btnO.Click += new System.EventHandler(this.btnO_Click);
             // 
             // btnP
             // 
@@ -449,6 +474,7 @@
             this.btnP.TabIndex = 25;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = true;
+            this.btnP.Click += new System.EventHandler(this.btnP_Click);
             // 
             // btnQ
             // 
@@ -458,6 +484,7 @@
             this.btnQ.TabIndex = 26;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = true;
+            this.btnQ.Click += new System.EventHandler(this.btnQ_Click);
             // 
             // btnR
             // 
@@ -467,6 +494,7 @@
             this.btnR.TabIndex = 27;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = true;
+            this.btnR.Click += new System.EventHandler(this.btnR_Click);
             // 
             // btnS
             // 
@@ -476,6 +504,7 @@
             this.btnS.TabIndex = 28;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = true;
+            this.btnS.Click += new System.EventHandler(this.btnS_Click);
             // 
             // btnT
             // 
@@ -485,6 +514,7 @@
             this.btnT.TabIndex = 29;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = true;
+            this.btnT.Click += new System.EventHandler(this.btnT_Click);
             // 
             // btnU
             // 
@@ -494,6 +524,7 @@
             this.btnU.TabIndex = 30;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = true;
+            this.btnU.Click += new System.EventHandler(this.btnU_Click);
             // 
             // btnV
             // 
@@ -503,6 +534,7 @@
             this.btnV.TabIndex = 31;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = true;
+            this.btnV.Click += new System.EventHandler(this.btnV_Click);
             // 
             // btnW
             // 
@@ -512,6 +544,7 @@
             this.btnW.TabIndex = 32;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
+            this.btnW.Click += new System.EventHandler(this.btnW_Click);
             // 
             // btnX
             // 
@@ -521,6 +554,7 @@
             this.btnX.TabIndex = 33;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // btnY
             // 
@@ -530,6 +564,7 @@
             this.btnY.TabIndex = 34;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = true;
+            this.btnY.Click += new System.EventHandler(this.btnY_Click);
             // 
             // btnZ
             // 
@@ -539,6 +574,7 @@
             this.btnZ.TabIndex = 35;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = true;
+            this.btnZ.Click += new System.EventHandler(this.btnZ_Click);
             // 
             // groupBox4
             // 
@@ -567,7 +603,7 @@
             this.groupBox4.Controls.Add(this.btnD);
             this.groupBox4.Controls.Add(this.btnC);
             this.groupBox4.Controls.Add(this.btnB);
-            this.groupBox4.Controls.Add(this.buttonA);
+            this.groupBox4.Controls.Add(this.btnA);
             this.groupBox4.Location = new System.Drawing.Point(558, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(216, 291);
@@ -575,11 +611,110 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "groupBox4";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(177, 367);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 44);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "A";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(228, 367);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 44);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "A";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(278, 367);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 44);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "A";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(328, 367);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 44);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "A";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(378, 367);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 44);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "A";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(428, 367);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 44);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "A";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(478, 367);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 44);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "A";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(528, 367);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 44);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "A";
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(596, 309);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(150, 32);
+            this.btnSubmit.TabIndex = 45;
+            this.btnSubmit.Text = "Submit Letter";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -591,19 +726,20 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptb1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -616,19 +752,19 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ptb1;
+        private System.Windows.Forms.PictureBox ptb2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Button buttonA;
+        private System.Windows.Forms.PictureBox ptb3;
+        private System.Windows.Forms.PictureBox ptb6;
+        private System.Windows.Forms.PictureBox ptb5;
+        private System.Windows.Forms.PictureBox ptb4;
+        private System.Windows.Forms.PictureBox ptb10;
+        private System.Windows.Forms.PictureBox ptb9;
+        private System.Windows.Forms.PictureBox ptb8;
+        private System.Windows.Forms.PictureBox ptb7;
+        private System.Windows.Forms.PictureBox ptb11;
+        private System.Windows.Forms.Button btnA;
         private System.Windows.Forms.Button btnB;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnD;
@@ -655,6 +791,15 @@
         private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnZ;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
