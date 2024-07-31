@@ -17,14 +17,13 @@ namespace Hangman
         public Form1()
         {
             InitializeComponent();
-            var TestWord = new diffculty("easy", "test", 4);
-            lblLet1.Text = TestWord.Difficulty;
         }
         public void Main(object sender, EventArgs e)
         {
- 
+            var TestWord = new diffculty("easy", "test", 4);
+            lblLet1.Text = TestWord.NumLetters.ToString();
 
-  
+
         }
       
         private void btnA_Click(object sender, EventArgs e)
