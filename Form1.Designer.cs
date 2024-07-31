@@ -36,7 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rad6 = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.ptb11 = new System.Windows.Forms.PictureBox();
             this.ptb10 = new System.Windows.Forms.PictureBox();
@@ -85,6 +85,9 @@
             this.lblLet7 = new System.Windows.Forms.Label();
             this.lblLet8 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnWSub = new System.Windows.Forms.Button();
+            this.tbxWord = new System.Windows.Forms.TextBox();
+            this.btnGO = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -151,7 +154,7 @@
             // 
             this.groupBox2.Controls.Add(this.radioButton4);
             this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
+            this.groupBox2.Controls.Add(this.rad6);
             this.groupBox2.Location = new System.Drawing.Point(21, 84);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(138, 144);
@@ -181,16 +184,16 @@
             this.radioButton5.Text = "radioButton5";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rad6
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(20, 34);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(85, 17);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "radioButton6";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rad6.AutoSize = true;
+            this.rad6.Location = new System.Drawing.Point(20, 34);
+            this.rad6.Name = "rad6";
+            this.rad6.Size = new System.Drawing.Size(85, 17);
+            this.rad6.TabIndex = 2;
+            this.rad6.TabStop = true;
+            this.rad6.Text = "radioButton6";
+            this.rad6.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -701,11 +704,44 @@
             this.btnSubmit.Text = "Submit Letter";
             this.btnSubmit.UseVisualStyleBackColor = true;
             // 
+            // btnWSub
+            // 
+            this.btnWSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWSub.Location = new System.Drawing.Point(596, 406);
+            this.btnWSub.Name = "btnWSub";
+            this.btnWSub.Size = new System.Drawing.Size(150, 32);
+            this.btnWSub.TabIndex = 46;
+            this.btnWSub.Text = "Word";
+            this.btnWSub.UseVisualStyleBackColor = true;
+            // 
+            // tbxWord
+            // 
+            this.tbxWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxWord.Location = new System.Drawing.Point(597, 367);
+            this.tbxWord.Name = "tbxWord";
+            this.tbxWord.Size = new System.Drawing.Size(149, 23);
+            this.tbxWord.TabIndex = 47;
+            this.tbxWord.Text = "Test";
+            // 
+            // btnGO
+            // 
+            this.btnGO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGO.Location = new System.Drawing.Point(21, 33);
+            this.btnGO.Name = "btnGO";
+            this.btnGO.Size = new System.Drawing.Size(150, 32);
+            this.btnGO.TabIndex = 48;
+            this.btnGO.Text = "GO";
+            this.btnGO.UseVisualStyleBackColor = true;
+            this.btnGO.Click += new System.EventHandler(this.btnGO_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGO);
+            this.Controls.Add(this.tbxWord);
+            this.Controls.Add(this.btnWSub);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblLet8);
             this.Controls.Add(this.lblLet7);
@@ -751,7 +787,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rad6;
         private System.Windows.Forms.PictureBox ptb1;
         private System.Windows.Forms.PictureBox ptb2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -800,6 +836,9 @@
         private System.Windows.Forms.Label lblLet7;
         private System.Windows.Forms.Label lblLet8;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnWSub;
+        private System.Windows.Forms.TextBox tbxWord;
+        private System.Windows.Forms.Button btnGO;
     }
 }
 

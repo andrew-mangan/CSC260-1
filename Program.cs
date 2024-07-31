@@ -16,10 +16,13 @@ namespace Hangman
         public static void Main()
         {
             //string difficultyS;
+            var TestWord = new diffculty("easy", "test", 4);
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
             
             
         }
@@ -47,9 +50,21 @@ namespace Hangman
         public diffculty(string Difficulty, string CodeWord, int numletters) : base(Difficulty, CodeWord)
         {
             NumLetters = numletters;
-            
+        }
 
-         
+        
+    }
+    public class TakeWord : diffculty
+    {
+               
+        public TakeWord(string Difficulty, string CodeWord, int numletters) : base(Difficulty, CodeWord, numletters)
+        {
+            //Difficulty = Diffculty;
+
+        }
+
+        public virtual void SpliceWord(string CodeWord)
+        {
             for (int i = 0; i < CodeWord.Length; i++)
             {
                 if ((CodeWord[i] >= '0') && (CodeWord[i] <= '9'))
@@ -57,7 +72,6 @@ namespace Hangman
                     NumLetters++;
                 }
             }
-
         }
     }
 

@@ -18,14 +18,201 @@ namespace Hangman
         {
             InitializeComponent();
         }
-        public void Main(object sender, EventArgs e)
+        
+        public class Program
         {
-            var TestWord = new diffculty("easy", "test", 4);
-            lblLet1.Text = TestWord.NumLetters.ToString();
+            /// <summary>
+            /// The main entry point for the application.
+            /// </summary>
+            // [STAThread]
+            public void Main()
+            {
+                //string difficultyS;
+                //var TestWord = new diffculty("easy", "test");
+                string CodeWord;
 
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Form1());
+                Console.Write("Enter the word.");
+                
+                CodeWord = Console.ReadLine();
+                char[] chars = CodeWord.ToCharArray();
+                //var TestWord2 = new diffculty("easy", "test");
+                //var EnterWord = new TakeWord("medium", null);
+
+                //Form1.lblLet1.Text = TestWord.NumLetters.ToString();
+                //lblLet2.Text = TakeWord.Numletters.ToString();
+
+
+            }
 
         }
-      
+
+        //constructors
+        public abstract class Word
+        {
+            public virtual string Difficulty { get; set; }
+            public virtual string CodeWord { get; set; }
+
+            public virtual int NumLetters
+            { get; set;
+                /*get
+                {
+                    return this.NumLetters;
+                }
+
+                set
+                {
+
+                    {
+                        if (value <= 0)
+                        {
+                            this.NumLetters = 0;
+                            this.Difficulty = null;
+                            this.CodeWord = null;
+
+                        }
+                        else if (value > 8)
+                        {
+                            this.NumLetters = 8;
+                            this.Difficulty = "HARD";
+                            this.CodeWord = "DAUGHTER";
+                        }
+                        else
+                        {
+                            this.NumLetters = value;
+                        }
+                    }
+                }*/
+            }
+
+            public Word(string difficulty, string codeword)
+            {
+                this.CodeWord = codeword;
+                this.Difficulty = difficulty;
+            }
+
+        }
+
+        public class Difficulty : Word
+        {
+            public char[] Letters;
+            protected string _toupper;
+
+            public Difficulty(string Difficulty, string CodeWord) : base(Difficulty, CodeWord)
+            {
+                _toupper = Difficulty.ToUpper();
+                Difficulty = _toupper;
+                _toupper = CodeWord.ToUpper();
+                CodeWord = _toupper;
+                NumLetters = 1;
+
+            }
+            
+            public virtual void SpliceWord()
+            {
+                for (int i = 0; i < CodeWord.Length; i++)
+                {
+                    if ((CodeWord[i] >= 0) && (CodeWord[i] <= 8))
+                    {
+                        Letters[i] = CodeWord[i];
+                        NumLetters++;
+                    }
+                }
+            }
+
+        }
+        public class TakeWord : Difficulty
+        {
+            private string _codeword;
+            public TakeWord(string Difficulty, string CodeWord) : base(Difficulty, CodeWord)
+            {
+
+
+                _codeword = CodeWord;
+
+
+                SpliceWord();
+                switch (_codeword.Length)
+                {
+                    case (0):
+                        Difficulty = null;
+                        break;
+                    case 1:
+                        Difficulty = "EASY";
+                        break;
+                    case 2:
+                        Difficulty = "EASY";// code block
+                        break;
+                    case 3:
+                        Difficulty = "EASY";
+                        break;
+                    case 4:
+                        Difficulty = "NORMAL";
+                        break;
+                    case 5:
+                        Difficulty = "NORMAL";
+                        break;
+                    case 6:
+                        Difficulty = "NORMAL";
+                        break;
+                    case 7:
+                        Difficulty = "HARD";
+                        break;
+                    default:
+                        Difficulty = "HARD";
+                        break;
+                }
+
+            }
+            public override void SpliceWord()
+            {
+                _codeword.ToUpper();
+                Letters[1] = 'A';
+                Letters[0] = 'B';
+                for (int i = 0; i < _codeword.Length; i++)
+                {
+                    if ((_codeword[i] >= 0) && (_codeword[i] <= 8))
+                    {
+                        Letters[i] = _codeword[i];
+                        NumLetters++;
+                    }
+                }
+                NumLetters = _codeword.Length;
+            }
+
+        }
+
+        private void btnGO_Click(object sender, EventArgs e)
+        {
+            var TestWord = new TakeWord("HARD", "HELLO");
+
+            /*if (tbxWord.Text == null)
+            {
+                var TestWord = new Difficulty("HARD", "MOTHER");
+                rad6.Text = TestWord.NumLetters.ToString();
+                lblLet1.Text = TestWord.Letters[0].ToString();
+                lblLet2.Text = TestWord.Letters[1].ToString();
+                lblLet3.Text = TestWord.Letters[2].ToString();
+                lblLet4.Text = TestWord.Letters[3].ToString();
+                lblLet5.Text = TestWord.Letters[4].ToString();
+                lblLet6.Text = TestWord.Letters[5].ToString();
+                lblLet7.Text = TestWord.Letters[6].ToString();
+                lblLet8.Text = TestWord.Letters[7].ToString();
+            }
+            else
+            {
+                var Testword = new TakeWord(null, tbxWord.Text);
+            }*/
+            rad6.Text = TestWord.CodeWord.ToString();
+            radioButton5.Text = TestWord.NumLetters.ToString();
+            radioButton4.Text = TestWord.CodeWord.Length.ToString();
+            lblLet1.Text = TestWord.Letters[1].ToString();
+
+        }
+        
+        
         private void btnA_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -392,5 +579,6 @@ namespace Hangman
             this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
         }
+
     }
 }
