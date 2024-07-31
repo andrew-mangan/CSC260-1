@@ -4,34 +4,35 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hangman
 {
+   
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
+            var TestWord = new diffculty("easy", "test", 4);
+            lblLet1.Text = TestWord.Difficulty;
         }
-        public void Main()
+        public void Main(object sender, EventArgs e)
         {
+ 
 
+  
         }
-
-
-
-
-
-
+      
         private void btnA_Click(object sender, EventArgs e)
         {
             ClrFormat();
             if (btnA.Font.Underline == true)
             {
-                
+               
                 this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             }
             else
@@ -39,7 +40,6 @@ namespace Hangman
                 this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnB_Click(object sender, EventArgs e)
         {
             ClrFormat();

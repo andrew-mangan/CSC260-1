@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -790,8 +790,8 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnZ;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label lblLet1;
+        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.Label lblLet1;
         private System.Windows.Forms.Label lblLet2;
         private System.Windows.Forms.Label lblLet3;
         private System.Windows.Forms.Label lblLet4;
