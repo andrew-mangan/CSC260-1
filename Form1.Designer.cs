@@ -75,7 +75,7 @@
             this.btnX = new System.Windows.Forms.Button();
             this.btnY = new System.Windows.Forms.Button();
             this.btnZ = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gbxLetters = new System.Windows.Forms.GroupBox();
             this.lblLet1 = new System.Windows.Forms.Label();
             this.lblLet2 = new System.Windows.Forms.Label();
             this.lblLet3 = new System.Windows.Forms.Label();
@@ -102,7 +102,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptb3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb1)).BeginInit();
-            this.groupBox4.SuspendLayout();
+            this.gbxLetters.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButton1
@@ -579,40 +579,40 @@
             this.btnZ.UseVisualStyleBackColor = true;
             this.btnZ.Click += new System.EventHandler(this.btnZ_Click);
             // 
-            // groupBox4
+            // gbxLetters
             // 
-            this.groupBox4.Controls.Add(this.btnZ);
-            this.groupBox4.Controls.Add(this.btnY);
-            this.groupBox4.Controls.Add(this.btnX);
-            this.groupBox4.Controls.Add(this.btnW);
-            this.groupBox4.Controls.Add(this.btnV);
-            this.groupBox4.Controls.Add(this.btnU);
-            this.groupBox4.Controls.Add(this.btnT);
-            this.groupBox4.Controls.Add(this.btnS);
-            this.groupBox4.Controls.Add(this.btnR);
-            this.groupBox4.Controls.Add(this.btnQ);
-            this.groupBox4.Controls.Add(this.btnP);
-            this.groupBox4.Controls.Add(this.btnO);
-            this.groupBox4.Controls.Add(this.btnN);
-            this.groupBox4.Controls.Add(this.btnM);
-            this.groupBox4.Controls.Add(this.btnL);
-            this.groupBox4.Controls.Add(this.btnK);
-            this.groupBox4.Controls.Add(this.btnJ);
-            this.groupBox4.Controls.Add(this.btnI);
-            this.groupBox4.Controls.Add(this.btnH);
-            this.groupBox4.Controls.Add(this.btnG);
-            this.groupBox4.Controls.Add(this.btnF);
-            this.groupBox4.Controls.Add(this.btnE);
-            this.groupBox4.Controls.Add(this.btnD);
-            this.groupBox4.Controls.Add(this.btnC);
-            this.groupBox4.Controls.Add(this.btnB);
-            this.groupBox4.Controls.Add(this.btnA);
-            this.groupBox4.Location = new System.Drawing.Point(558, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(216, 291);
-            this.groupBox4.TabIndex = 36;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.gbxLetters.Controls.Add(this.btnZ);
+            this.gbxLetters.Controls.Add(this.btnY);
+            this.gbxLetters.Controls.Add(this.btnX);
+            this.gbxLetters.Controls.Add(this.btnW);
+            this.gbxLetters.Controls.Add(this.btnV);
+            this.gbxLetters.Controls.Add(this.btnU);
+            this.gbxLetters.Controls.Add(this.btnT);
+            this.gbxLetters.Controls.Add(this.btnS);
+            this.gbxLetters.Controls.Add(this.btnR);
+            this.gbxLetters.Controls.Add(this.btnQ);
+            this.gbxLetters.Controls.Add(this.btnP);
+            this.gbxLetters.Controls.Add(this.btnO);
+            this.gbxLetters.Controls.Add(this.btnN);
+            this.gbxLetters.Controls.Add(this.btnM);
+            this.gbxLetters.Controls.Add(this.btnL);
+            this.gbxLetters.Controls.Add(this.btnK);
+            this.gbxLetters.Controls.Add(this.btnJ);
+            this.gbxLetters.Controls.Add(this.btnI);
+            this.gbxLetters.Controls.Add(this.btnH);
+            this.gbxLetters.Controls.Add(this.btnG);
+            this.gbxLetters.Controls.Add(this.btnF);
+            this.gbxLetters.Controls.Add(this.btnE);
+            this.gbxLetters.Controls.Add(this.btnD);
+            this.gbxLetters.Controls.Add(this.btnC);
+            this.gbxLetters.Controls.Add(this.btnB);
+            this.gbxLetters.Controls.Add(this.btnA);
+            this.gbxLetters.Location = new System.Drawing.Point(558, 12);
+            this.gbxLetters.Name = "gbxLetters";
+            this.gbxLetters.Size = new System.Drawing.Size(216, 291);
+            this.gbxLetters.TabIndex = 1;
+            this.gbxLetters.TabStop = false;
+            this.gbxLetters.Text = "Letters";
             // 
             // lblLet1
             // 
@@ -714,6 +714,7 @@
             this.btnWSub.TabIndex = 46;
             this.btnWSub.Text = "Word";
             this.btnWSub.UseVisualStyleBackColor = true;
+            this.btnWSub.Click += new System.EventHandler(this.btnWSub_Click);
             // 
             // tbxWord
             // 
@@ -752,12 +753,14 @@
             this.Controls.Add(this.lblLet3);
             this.Controls.Add(this.lblLet2);
             this.Controls.Add(this.lblLet1);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.gbxLetters);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -774,7 +777,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptb3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb1)).EndInit();
-            this.groupBox4.ResumeLayout(false);
+            this.gbxLetters.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -827,7 +830,7 @@
         private System.Windows.Forms.Button btnX;
         private System.Windows.Forms.Button btnY;
         private System.Windows.Forms.Button btnZ;
-        public System.Windows.Forms.GroupBox groupBox4;
+        public System.Windows.Forms.GroupBox gbxLetters;
         public System.Windows.Forms.Label lblLet1;
         private System.Windows.Forms.Label lblLet2;
         private System.Windows.Forms.Label lblLet3;
