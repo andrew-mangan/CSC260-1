@@ -703,6 +703,7 @@
             this.btnSubmit.TabIndex = 45;
             this.btnSubmit.Text = "Submit Letter";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnWSub
             // 

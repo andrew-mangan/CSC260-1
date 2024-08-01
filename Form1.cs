@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -50,47 +51,26 @@ namespace Hangman
         }
 
         //constructors
+        public interface ICheckLetters
+        {
+            string CodeWord { get; set; }
+            void PrintAllWords(string message);
+            bool IsWordCorrect(char[] ChkWord, string Word);
+            
+        }
+
+
         public abstract class Word
         {
             public virtual string Difficulty { get; set; }
             public virtual string CodeWord { get; set; }
 
-            public virtual int NumLetters
-            { get; set;
-                /*get
-                {
-                    return this.NumLetters;
-                }
+            public virtual int NumLetters { get; set; }
 
-                set
-                {
-
-                    {
-                        if (value <= 0)
-                        {
-                            this.NumLetters = 0;
-                            this.Difficulty = null;
-                            this.CodeWord = null;
-
-                        }
-                        else if (value > 8)
-                        {
-                            this.NumLetters = 8;
-                            this.Difficulty = "HARD";
-                            this.CodeWord = "DAUGHTER";
-                        }
-                        else
-                        {
-                            this.NumLetters = value;
-                        }
-                    }
-                }*/
-            }
-
-            public Word(string difficulty, string codeword)
+            public Word(string difficulty, string codeword, int numletters)
             {
                 this.CodeWord = codeword;
-                this.Difficulty = difficulty;
+                this.Difficulty = difficulty; 
             }
 
         }
@@ -100,50 +80,46 @@ namespace Hangman
             public char[] Letters;
             protected string _toupper;
 
-            public Difficulty(string Difficulty, string CodeWord) : base(Difficulty, CodeWord)
+            public Difficulty(string Difficulty, string CodeWord, int numletters) : base(Difficulty, CodeWord, numletters)
             {
                 _toupper = Difficulty.ToUpper();
                 Difficulty = _toupper;
                 _toupper = CodeWord.ToUpper();
-                CodeWord = _toupper;
-                NumLetters = 1;
+                this.CodeWord = _toupper;
+                SpliceWord();
 
             }
             
             public virtual void SpliceWord()
             {
-                for (int i = 0; i < CodeWord.Length; i++)
-                {
-                    if ((CodeWord[i] >= 0) && (CodeWord[i] <= 8))
-                    {
-                        Letters[i] = CodeWord[i];
-                        NumLetters++;
-                    }
-                }
+                NumLetters = CodeWord.Length;
+                Letters = CodeWord.ToCharArray();
             }
 
         }
         public class TakeWord : Difficulty
         {
             private string _codeword;
-            public TakeWord(string Difficulty, string CodeWord) : base(Difficulty, CodeWord)
+            public TakeWord(string Difficulty, string CodeWord, int numletters) : base(Difficulty, CodeWord, numletters)
             {
-
-
-                _codeword = CodeWord;
-
-
+                _codeword = CodeWord.ToUpper();
                 SpliceWord();
-                switch (_codeword.Length)
+            }
+            public override void SpliceWord()
+            {
+                NumLetters = _codeword.Length;
+                Letters = _codeword.ToCharArray();
+
+                switch (NumLetters)
                 {
                     case (0):
-                        Difficulty = null;
+                        Difficulty = "null";
                         break;
                     case 1:
                         Difficulty = "EASY";
                         break;
                     case 2:
-                        Difficulty = "EASY";// code block
+                        Difficulty = "EASY";
                         break;
                     case 3:
                         Difficulty = "EASY";
@@ -164,34 +140,35 @@ namespace Hangman
                         Difficulty = "HARD";
                         break;
                 }
-
             }
-            public override void SpliceWord()
+
+        }
+        public class temporary : ICheckLetters
+        {
+            public string CodeWord { get; set; }
+            public void PrintAllWords(string message)
             {
-                _codeword.ToUpper();
-                Letters[1] = 'A';
-                Letters[0] = 'B';
-                for (int i = 0; i < _codeword.Length; i++)
-                {
-                    if ((_codeword[i] >= 0) && (_codeword[i] <= 8))
-                    {
-                        Letters[i] = _codeword[i];
-                        NumLetters++;
-                    }
-                }
-                NumLetters = _codeword.Length;
+                Console.WriteLine(message);
+            }
+            public bool IsWordCorrect(char[] Letters, string Word)
+            {
+                string Combined = new string(Letters);
+                return (Combined == Word);
+            }
+            public temporary()
+            {
+                throw new NotImplementedException();
             }
 
         }
 
         private void btnGO_Click(object sender, EventArgs e)
         {
-            var TestWord = new TakeWord("HARD", "HELLO");
+            var TestWord = new Difficulty("HARD", "positive", 8);
 
-            /*if (tbxWord.Text == null)
+            if (tbxWord.Text == null)
             {
-                var TestWord = new Difficulty("HARD", "MOTHER");
-                rad6.Text = TestWord.NumLetters.ToString();
+                
                 lblLet1.Text = TestWord.Letters[0].ToString();
                 lblLet2.Text = TestWord.Letters[1].ToString();
                 lblLet3.Text = TestWord.Letters[2].ToString();
@@ -203,16 +180,19 @@ namespace Hangman
             }
             else
             {
-                var Testword = new TakeWord(null, tbxWord.Text);
-            }*/
+                var Testword = new TakeWord(null, tbxWord.Text, tbxWord.Text.Length);
+            }
             rad6.Text = TestWord.CodeWord.ToString();
             radioButton5.Text = TestWord.NumLetters.ToString();
-            radioButton4.Text = TestWord.CodeWord.Length.ToString();
-            lblLet1.Text = TestWord.Letters[1].ToString();
+            radioButton4.Text = TestWord.Difficulty.ToString();
+            TestWord.Letters[1].ToString();
 
         }
-        
-        
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btnA_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -238,7 +218,6 @@ namespace Hangman
                 this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnC_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -251,7 +230,6 @@ namespace Hangman
                 this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnD_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -264,7 +242,6 @@ namespace Hangman
                 this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnE_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -277,7 +254,6 @@ namespace Hangman
                 this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnF_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -290,7 +266,6 @@ namespace Hangman
                 this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnG_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -303,7 +278,6 @@ namespace Hangman
                 this.btnG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnH_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -316,7 +290,6 @@ namespace Hangman
                 this.btnH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnI_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -329,7 +302,6 @@ namespace Hangman
                 this.btnI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnJ_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -342,7 +314,6 @@ namespace Hangman
                 this.btnJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnK_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -355,7 +326,6 @@ namespace Hangman
                 this.btnK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnL_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -368,7 +338,6 @@ namespace Hangman
                 this.btnL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnM_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -381,7 +350,6 @@ namespace Hangman
                 this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnN_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -394,7 +362,6 @@ namespace Hangman
                 this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnO_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -407,7 +374,6 @@ namespace Hangman
                 this.btnO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnP_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -420,7 +386,6 @@ namespace Hangman
                 this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnQ_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -433,7 +398,6 @@ namespace Hangman
                 this.btnQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnR_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -446,7 +410,6 @@ namespace Hangman
                 this.btnR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnS_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -459,7 +422,6 @@ namespace Hangman
                 this.btnS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnT_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -472,7 +434,6 @@ namespace Hangman
                 this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnU_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -485,7 +446,6 @@ namespace Hangman
                 this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnV_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -498,7 +458,6 @@ namespace Hangman
                 this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnW_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -511,7 +470,6 @@ namespace Hangman
                 this.btnW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnX_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -524,7 +482,6 @@ namespace Hangman
                 this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnY_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -537,7 +494,6 @@ namespace Hangman
                 this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
-
         private void btnZ_Click(object sender, EventArgs e)
         {
             ClrFormat();
@@ -579,6 +535,7 @@ namespace Hangman
             this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
         }
+
 
     }
 }
