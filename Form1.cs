@@ -286,7 +286,7 @@ namespace Hangman
             }
             else
             {
-                this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnB_Click(object sender, EventArgs e)
@@ -298,7 +298,7 @@ namespace Hangman
             }
             else
             {
-                this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnC_Click(object sender, EventArgs e)
@@ -310,7 +310,7 @@ namespace Hangman
             }
             else
             {
-                this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnD_Click(object sender, EventArgs e)
@@ -322,7 +322,7 @@ namespace Hangman
             }
             else
             {
-                this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnE_Click(object sender, EventArgs e)
@@ -334,7 +334,7 @@ namespace Hangman
             }
             else
             {
-                this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnF_Click(object sender, EventArgs e)
@@ -346,7 +346,7 @@ namespace Hangman
             }
             else
             {
-                this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnG_Click(object sender, EventArgs e)
@@ -358,7 +358,7 @@ namespace Hangman
             }
             else
             {
-                this.btnG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnG.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnH_Click(object sender, EventArgs e)
@@ -370,7 +370,7 @@ namespace Hangman
             }
             else
             {
-                this.btnH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnH.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnI_Click(object sender, EventArgs e)
@@ -382,7 +382,7 @@ namespace Hangman
             }
             else
             {
-                this.btnI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnJ_Click(object sender, EventArgs e)
@@ -394,7 +394,7 @@ namespace Hangman
             }
             else
             {
-                this.btnJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnK_Click(object sender, EventArgs e)
@@ -406,7 +406,7 @@ namespace Hangman
             }
             else
             {
-                this.btnK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnL_Click(object sender, EventArgs e)
@@ -418,7 +418,7 @@ namespace Hangman
             }
             else
             {
-                this.btnL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnM_Click(object sender, EventArgs e)
@@ -430,7 +430,7 @@ namespace Hangman
             }
             else
             {
-                this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnN_Click(object sender, EventArgs e)
@@ -442,7 +442,7 @@ namespace Hangman
             }
             else
             {
-                this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnO_Click(object sender, EventArgs e)
@@ -454,7 +454,7 @@ namespace Hangman
             }
             else
             {
-                this.btnO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnP_Click(object sender, EventArgs e)
@@ -466,7 +466,7 @@ namespace Hangman
             }
             else
             {
-                this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnQ_Click(object sender, EventArgs e)
@@ -478,7 +478,7 @@ namespace Hangman
             }
             else
             {
-                this.btnQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnR_Click(object sender, EventArgs e)
@@ -490,7 +490,7 @@ namespace Hangman
             }
             else
             {
-                this.btnR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnR.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnS_Click(object sender, EventArgs e)
@@ -502,7 +502,7 @@ namespace Hangman
             }
             else
             {
-                this.btnS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnT_Click(object sender, EventArgs e)
@@ -514,7 +514,7 @@ namespace Hangman
             }
             else
             {
-                this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnU_Click(object sender, EventArgs e)
@@ -526,7 +526,7 @@ namespace Hangman
             }
             else
             {
-                this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnV_Click(object sender, EventArgs e)
@@ -538,7 +538,7 @@ namespace Hangman
             }
             else
             {
-                this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnW_Click(object sender, EventArgs e)
@@ -550,7 +550,7 @@ namespace Hangman
             }
             else
             {
-                this.btnW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnX_Click(object sender, EventArgs e)
@@ -562,7 +562,7 @@ namespace Hangman
             }
             else
             {
-                this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnY_Click(object sender, EventArgs e)
@@ -574,7 +574,7 @@ namespace Hangman
             }
             else
             {
-                this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void btnZ_Click(object sender, EventArgs e)
@@ -586,7 +586,7 @@ namespace Hangman
             }
             else
             {
-                this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, style: FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         private void ClrFormat()
