@@ -128,7 +128,7 @@ namespace Hangman
 
         }
 
-        public class SubmitLetter : CheckWord
+        public class SubmitLetter : CheckWord //class to check the letter submtted
         {
             protected char[] _chars;
             
