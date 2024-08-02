@@ -320,6 +320,7 @@ namespace Hangman
 
         private void btnGO_Click(object sender, EventArgs e)
         {
+            
             failstep = 0;
             if (tbxWord.Text == null) //This section test the classes with either input or preselected word(s)
             {
@@ -340,7 +341,8 @@ namespace Hangman
                     Radios(Testword.Letters.Length);
                 }
             }
-           
+            tbxWord.Text = "";
+
             //DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
             ClrForGame();
         }
@@ -924,7 +926,7 @@ namespace Hangman
                 DisplayWord(Testword.Letters, Testword.CodeWord);
                 Radios(Testword.Letters.Length);
             }
-            tbxWord.Text = "";
+            
             DisplayTruth(GLetters, GLetters.ToString());
             
         } 
