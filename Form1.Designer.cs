@@ -37,7 +37,7 @@
             this.radHard = new System.Windows.Forms.RadioButton();
             this.radMed = new System.Windows.Forms.RadioButton();
             this.radEasy = new System.Windows.Forms.RadioButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Hangman = new System.Windows.Forms.GroupBox();
             this.ptb11 = new System.Windows.Forms.PictureBox();
             this.ptb10 = new System.Windows.Forms.PictureBox();
             this.ptb9 = new System.Windows.Forms.PictureBox();
@@ -90,7 +90,7 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.gpbSize.SuspendLayout();
             this.grbDiff.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.Hangman.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptb11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb9)).BeginInit();
@@ -195,26 +195,26 @@
             this.radEasy.Text = "Easy";
             this.radEasy.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // Hangman
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Silver;
-            this.groupBox3.Controls.Add(this.ptb11);
-            this.groupBox3.Controls.Add(this.ptb10);
-            this.groupBox3.Controls.Add(this.ptb9);
-            this.groupBox3.Controls.Add(this.ptb8);
-            this.groupBox3.Controls.Add(this.ptb7);
-            this.groupBox3.Controls.Add(this.ptb6);
-            this.groupBox3.Controls.Add(this.ptb5);
-            this.groupBox3.Controls.Add(this.ptb4);
-            this.groupBox3.Controls.Add(this.ptb3);
-            this.groupBox3.Controls.Add(this.ptb2);
-            this.groupBox3.Controls.Add(this.ptb1);
-            this.groupBox3.Location = new System.Drawing.Point(201, 35);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(300, 304);
-            this.groupBox3.TabIndex = 9;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.Hangman.BackColor = System.Drawing.Color.White;
+            this.Hangman.Controls.Add(this.ptb11);
+            this.Hangman.Controls.Add(this.ptb10);
+            this.Hangman.Controls.Add(this.ptb9);
+            this.Hangman.Controls.Add(this.ptb8);
+            this.Hangman.Controls.Add(this.ptb7);
+            this.Hangman.Controls.Add(this.ptb6);
+            this.Hangman.Controls.Add(this.ptb5);
+            this.Hangman.Controls.Add(this.ptb4);
+            this.Hangman.Controls.Add(this.ptb3);
+            this.Hangman.Controls.Add(this.ptb2);
+            this.Hangman.Controls.Add(this.ptb1);
+            this.Hangman.Location = new System.Drawing.Point(201, 35);
+            this.Hangman.Name = "Hangman";
+            this.Hangman.Size = new System.Drawing.Size(300, 304);
+            this.Hangman.TabIndex = 9;
+            this.Hangman.TabStop = false;
+            this.Hangman.Text = "groupBox3";
             // 
             // ptb11
             // 
@@ -320,10 +320,10 @@
             // 
             // btnA
             // 
-            this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnA.Location = new System.Drawing.Point(21, 23);
             this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(31, 30);
+            this.btnA.Size = new System.Drawing.Size(35, 35);
             this.btnA.TabIndex = 10;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = true;
@@ -331,9 +331,10 @@
             // 
             // btnB
             // 
+            this.btnB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnB.Location = new System.Drawing.Point(58, 23);
             this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(31, 30);
+            this.btnB.Size = new System.Drawing.Size(35, 35);
             this.btnB.TabIndex = 11;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = true;
@@ -341,9 +342,10 @@
             // 
             // btnC
             // 
+            this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.Location = new System.Drawing.Point(95, 23);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(31, 30);
+            this.btnC.Size = new System.Drawing.Size(35, 35);
             this.btnC.TabIndex = 12;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
@@ -351,9 +353,10 @@
             // 
             // btnD
             // 
+            this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnD.Location = new System.Drawing.Point(132, 23);
             this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(31, 30);
+            this.btnD.Size = new System.Drawing.Size(35, 35);
             this.btnD.TabIndex = 13;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = true;
@@ -361,9 +364,10 @@
             // 
             // btnE
             // 
+            this.btnE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnE.Location = new System.Drawing.Point(169, 23);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(31, 30);
+            this.btnE.Size = new System.Drawing.Size(35, 35);
             this.btnE.TabIndex = 14;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = true;
@@ -371,9 +375,10 @@
             // 
             // btnF
             // 
+            this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnF.Location = new System.Drawing.Point(21, 67);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(31, 30);
+            this.btnF.Size = new System.Drawing.Size(35, 35);
             this.btnF.TabIndex = 15;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = true;
@@ -381,9 +386,10 @@
             // 
             // btnG
             // 
+            this.btnG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnG.Location = new System.Drawing.Point(58, 67);
             this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(31, 30);
+            this.btnG.Size = new System.Drawing.Size(35, 35);
             this.btnG.TabIndex = 16;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = true;
@@ -391,9 +397,10 @@
             // 
             // btnH
             // 
+            this.btnH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnH.Location = new System.Drawing.Point(95, 67);
             this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(31, 30);
+            this.btnH.Size = new System.Drawing.Size(35, 35);
             this.btnH.TabIndex = 17;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = true;
@@ -401,9 +408,10 @@
             // 
             // btnI
             // 
+            this.btnI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnI.Location = new System.Drawing.Point(132, 67);
             this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(31, 30);
+            this.btnI.Size = new System.Drawing.Size(35, 35);
             this.btnI.TabIndex = 18;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = true;
@@ -411,9 +419,10 @@
             // 
             // btnJ
             // 
+            this.btnJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJ.Location = new System.Drawing.Point(169, 67);
             this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(31, 30);
+            this.btnJ.Size = new System.Drawing.Size(35, 35);
             this.btnJ.TabIndex = 19;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = true;
@@ -421,9 +430,10 @@
             // 
             // btnK
             // 
+            this.btnK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnK.Location = new System.Drawing.Point(21, 111);
             this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(31, 30);
+            this.btnK.Size = new System.Drawing.Size(35, 35);
             this.btnK.TabIndex = 20;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = true;
@@ -431,9 +441,10 @@
             // 
             // btnL
             // 
+            this.btnL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnL.Location = new System.Drawing.Point(58, 111);
             this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(31, 30);
+            this.btnL.Size = new System.Drawing.Size(35, 35);
             this.btnL.TabIndex = 21;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = true;
@@ -441,9 +452,10 @@
             // 
             // btnM
             // 
+            this.btnM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnM.Location = new System.Drawing.Point(95, 111);
             this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(31, 30);
+            this.btnM.Size = new System.Drawing.Size(35, 35);
             this.btnM.TabIndex = 22;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = true;
@@ -451,9 +463,10 @@
             // 
             // btnN
             // 
+            this.btnN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnN.Location = new System.Drawing.Point(132, 111);
             this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(31, 30);
+            this.btnN.Size = new System.Drawing.Size(35, 35);
             this.btnN.TabIndex = 23;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = true;
@@ -461,9 +474,10 @@
             // 
             // btnO
             // 
+            this.btnO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnO.Location = new System.Drawing.Point(169, 111);
             this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(31, 30);
+            this.btnO.Size = new System.Drawing.Size(35, 35);
             this.btnO.TabIndex = 24;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = true;
@@ -471,9 +485,10 @@
             // 
             // btnP
             // 
+            this.btnP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnP.Location = new System.Drawing.Point(21, 158);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(31, 30);
+            this.btnP.Size = new System.Drawing.Size(35, 35);
             this.btnP.TabIndex = 25;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = true;
@@ -481,9 +496,10 @@
             // 
             // btnQ
             // 
+            this.btnQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQ.Location = new System.Drawing.Point(58, 158);
             this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(31, 30);
+            this.btnQ.Size = new System.Drawing.Size(35, 35);
             this.btnQ.TabIndex = 26;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = true;
@@ -491,9 +507,10 @@
             // 
             // btnR
             // 
+            this.btnR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnR.Location = new System.Drawing.Point(95, 158);
             this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(31, 30);
+            this.btnR.Size = new System.Drawing.Size(35, 35);
             this.btnR.TabIndex = 27;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = true;
@@ -501,9 +518,10 @@
             // 
             // btnS
             // 
+            this.btnS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnS.Location = new System.Drawing.Point(132, 158);
             this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(31, 30);
+            this.btnS.Size = new System.Drawing.Size(35, 35);
             this.btnS.TabIndex = 28;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = true;
@@ -511,9 +529,10 @@
             // 
             // btnT
             // 
+            this.btnT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnT.Location = new System.Drawing.Point(169, 158);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(31, 30);
+            this.btnT.Size = new System.Drawing.Size(35, 35);
             this.btnT.TabIndex = 29;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = true;
@@ -521,9 +540,10 @@
             // 
             // btnU
             // 
+            this.btnU.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnU.Location = new System.Drawing.Point(21, 205);
             this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(31, 30);
+            this.btnU.Size = new System.Drawing.Size(35, 35);
             this.btnU.TabIndex = 30;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = true;
@@ -531,9 +551,10 @@
             // 
             // btnV
             // 
+            this.btnV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnV.Location = new System.Drawing.Point(58, 205);
             this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(31, 30);
+            this.btnV.Size = new System.Drawing.Size(35, 35);
             this.btnV.TabIndex = 31;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = true;
@@ -541,9 +562,10 @@
             // 
             // btnW
             // 
+            this.btnW.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnW.Location = new System.Drawing.Point(95, 205);
             this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(31, 30);
+            this.btnW.Size = new System.Drawing.Size(35, 35);
             this.btnW.TabIndex = 32;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = true;
@@ -551,9 +573,10 @@
             // 
             // btnX
             // 
+            this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX.Location = new System.Drawing.Point(132, 205);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(31, 30);
+            this.btnX.Size = new System.Drawing.Size(35, 35);
             this.btnX.TabIndex = 33;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = true;
@@ -561,9 +584,10 @@
             // 
             // btnY
             // 
+            this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY.Location = new System.Drawing.Point(169, 205);
             this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(31, 30);
+            this.btnY.Size = new System.Drawing.Size(35, 35);
             this.btnY.TabIndex = 34;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = true;
@@ -571,9 +595,10 @@
             // 
             // btnZ
             // 
+            this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZ.Location = new System.Drawing.Point(169, 249);
             this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(31, 30);
+            this.btnZ.Size = new System.Drawing.Size(35, 35);
             this.btnZ.TabIndex = 35;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = true;
@@ -609,7 +634,7 @@
             this.gbxLetters.Controls.Add(this.btnA);
             this.gbxLetters.Location = new System.Drawing.Point(558, 12);
             this.gbxLetters.Name = "gbxLetters";
-            this.gbxLetters.Size = new System.Drawing.Size(216, 291);
+            this.gbxLetters.Size = new System.Drawing.Size(216, 306);
             this.gbxLetters.TabIndex = 1;
             this.gbxLetters.TabStop = false;
             this.gbxLetters.Text = "Letters";
@@ -618,7 +643,7 @@
             // 
             this.lblLet1.AutoSize = true;
             this.lblLet1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet1.Location = new System.Drawing.Point(177, 367);
+            this.lblLet1.Location = new System.Drawing.Point(177, 417);
             this.lblLet1.Name = "lblLet1";
             this.lblLet1.Size = new System.Drawing.Size(44, 44);
             this.lblLet1.TabIndex = 37;
@@ -628,7 +653,7 @@
             // 
             this.lblLet2.AutoSize = true;
             this.lblLet2.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet2.Location = new System.Drawing.Point(228, 367);
+            this.lblLet2.Location = new System.Drawing.Point(228, 417);
             this.lblLet2.Name = "lblLet2";
             this.lblLet2.Size = new System.Drawing.Size(44, 44);
             this.lblLet2.TabIndex = 38;
@@ -638,7 +663,7 @@
             // 
             this.lblLet3.AutoSize = true;
             this.lblLet3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet3.Location = new System.Drawing.Point(278, 367);
+            this.lblLet3.Location = new System.Drawing.Point(278, 417);
             this.lblLet3.Name = "lblLet3";
             this.lblLet3.Size = new System.Drawing.Size(44, 44);
             this.lblLet3.TabIndex = 39;
@@ -648,7 +673,7 @@
             // 
             this.lblLet4.AutoSize = true;
             this.lblLet4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet4.Location = new System.Drawing.Point(328, 367);
+            this.lblLet4.Location = new System.Drawing.Point(328, 417);
             this.lblLet4.Name = "lblLet4";
             this.lblLet4.Size = new System.Drawing.Size(44, 44);
             this.lblLet4.TabIndex = 40;
@@ -658,7 +683,7 @@
             // 
             this.lblLet5.AutoSize = true;
             this.lblLet5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet5.Location = new System.Drawing.Point(378, 367);
+            this.lblLet5.Location = new System.Drawing.Point(378, 417);
             this.lblLet5.Name = "lblLet5";
             this.lblLet5.Size = new System.Drawing.Size(44, 44);
             this.lblLet5.TabIndex = 41;
@@ -668,7 +693,7 @@
             // 
             this.lblLet6.AutoSize = true;
             this.lblLet6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet6.Location = new System.Drawing.Point(428, 367);
+            this.lblLet6.Location = new System.Drawing.Point(428, 417);
             this.lblLet6.Name = "lblLet6";
             this.lblLet6.Size = new System.Drawing.Size(44, 44);
             this.lblLet6.TabIndex = 42;
@@ -678,7 +703,7 @@
             // 
             this.lblLet7.AutoSize = true;
             this.lblLet7.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet7.Location = new System.Drawing.Point(478, 367);
+            this.lblLet7.Location = new System.Drawing.Point(478, 417);
             this.lblLet7.Name = "lblLet7";
             this.lblLet7.Size = new System.Drawing.Size(44, 44);
             this.lblLet7.TabIndex = 43;
@@ -688,7 +713,7 @@
             // 
             this.lblLet8.AutoSize = true;
             this.lblLet8.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLet8.Location = new System.Drawing.Point(528, 367);
+            this.lblLet8.Location = new System.Drawing.Point(528, 417);
             this.lblLet8.Name = "lblLet8";
             this.lblLet8.Size = new System.Drawing.Size(44, 44);
             this.lblLet8.TabIndex = 44;
@@ -697,7 +722,7 @@
             // btnWSub
             // 
             this.btnWSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWSub.Location = new System.Drawing.Point(596, 406);
+            this.btnWSub.Location = new System.Drawing.Point(596, 468);
             this.btnWSub.Name = "btnWSub";
             this.btnWSub.Size = new System.Drawing.Size(150, 32);
             this.btnWSub.TabIndex = 46;
@@ -708,11 +733,11 @@
             // tbxWord
             // 
             this.tbxWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxWord.Location = new System.Drawing.Point(597, 367);
+            this.tbxWord.Location = new System.Drawing.Point(597, 429);
             this.tbxWord.Name = "tbxWord";
             this.tbxWord.Size = new System.Drawing.Size(149, 23);
             this.tbxWord.TabIndex = 47;
-            this.tbxWord.Text = "Test";
+            this.tbxWord.Text = "pencil";
             // 
             // btnGO
             // 
@@ -728,7 +753,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(598, 317);
+            this.btnSubmit.Location = new System.Drawing.Point(598, 379);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(147, 36);
             this.btnSubmit.TabIndex = 49;
@@ -740,7 +765,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 534);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnGO);
             this.Controls.Add(this.tbxWord);
@@ -754,7 +779,7 @@
             this.Controls.Add(this.lblLet2);
             this.Controls.Add(this.lblLet1);
             this.Controls.Add(this.gbxLetters);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.Hangman);
             this.Controls.Add(this.grbDiff);
             this.Controls.Add(this.gpbSize);
             this.KeyPreview = true;
@@ -765,7 +790,7 @@
             this.gpbSize.PerformLayout();
             this.grbDiff.ResumeLayout(false);
             this.grbDiff.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.Hangman.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptb11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptb9)).EndInit();
@@ -794,7 +819,7 @@
         private System.Windows.Forms.RadioButton radEasy;
         private System.Windows.Forms.PictureBox ptb1;
         private System.Windows.Forms.PictureBox ptb2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox Hangman;
         private System.Windows.Forms.PictureBox ptb3;
         private System.Windows.Forms.PictureBox ptb6;
         private System.Windows.Forms.PictureBox ptb5;
