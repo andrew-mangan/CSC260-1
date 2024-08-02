@@ -1,26 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hangman
 {
-   
+
     public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
         }
-        
+
         public class Program
         {
             /// <summary>
@@ -43,7 +36,7 @@ namespace Hangman
             bool AllLetters { get; set; }
             void PrintAllWords(string message);
             bool IsWordCorrect(char[] ChkWord, string Word, bool done);
-            
+
         }
 
 
@@ -57,7 +50,7 @@ namespace Hangman
             public Word(string difficulty, string codeword, int numletters)
             {
                 this.CodeWord = codeword;
-                this.Difficulty = difficulty; 
+                this.Difficulty = difficulty;
             }
 
         }
@@ -70,10 +63,10 @@ namespace Hangman
             {
                 CodeWord = CodeWord.ToUpper(); //creates uppercase for the CodeWord
                 Difficulty = Difficulty.ToUpper(); //Creates upper case for difficulty text
-               
+
                 SpliceWord();
             }
-            
+
             public virtual void SpliceWord()
             {
                 Letters = CodeWord.ToCharArray();
@@ -125,10 +118,10 @@ namespace Hangman
             }
 
         }
-        public class temporary : ICheckLetters 
+        public class temporary : ICheckLetters
         {
             public string CodeWord { get; set; }
-            public bool AllLetters { get; set; } 
+            public bool AllLetters { get; set; }
             public void PrintAllWords(string message)
             {
                 Console.WriteLine(message);
@@ -147,7 +140,11 @@ namespace Hangman
 
         public class SubmitLetter : temporary
         {
-
+            
+            public SubmitLetter(string codeword, bool allletters, string checkword)
+            {
+                throw new NotImplementedException();
+            }
         }
         public void DisplayWord(char[] letters, string word)
         {
@@ -161,10 +158,10 @@ namespace Hangman
             lblLet8.Visible = false;
 
             switch (letters.Length)
-                {
+            {
                 case 1:
-                    lblLet1.Visible = true; 
-                    lblLet1.Text = letters[0].ToString(); 
+                    lblLet1.Visible = true;
+                    lblLet1.Text = letters[0].ToString();
                     break;
                 case 2:
                     lblLet1.Visible = true;
@@ -233,55 +230,41 @@ namespace Hangman
                     lblLet7.Text = letters[6].ToString();
                     break;
                 default:
-                    lblLet1.Visible = true; 
+                    lblLet1.Visible = true;
                     lblLet1.Text = letters[0].ToString();
                     lblLet2.Visible = true;
-                    lblLet2.Text = letters[1].ToString(); 
+                    lblLet2.Text = letters[1].ToString();
                     lblLet3.Visible = true;
-                    lblLet3.Text = letters[2].ToString(); 
-                    lblLet4.Visible = true; 
-                    lblLet4.Text = letters[3].ToString(); 
-                    lblLet5.Visible = true; 
-                    lblLet5.Text = letters[4].ToString(); 
-                    lblLet6.Visible = true; 
-                    lblLet6.Text = letters[5].ToString(); 
+                    lblLet3.Text = letters[2].ToString();
+                    lblLet4.Visible = true;
+                    lblLet4.Text = letters[3].ToString();
+                    lblLet5.Visible = true;
+                    lblLet5.Text = letters[4].ToString();
+                    lblLet6.Visible = true;
+                    lblLet6.Text = letters[5].ToString();
                     lblLet7.Visible = true;
-                    lblLet7.Text = letters[6].ToString(); 
-                    lblLet8.Visible = true; 
-                    lblLet8.Text = letters[7].ToString(); 
+                    lblLet7.Text = letters[6].ToString();
+                    lblLet8.Visible = true;
+                    lblLet8.Text = letters[7].ToString();
                     break;
             }
-            
+
         } //Displays the word in letters section
 
         private void btnGO_Click(object sender, EventArgs e)
         {
-            
-
-            if (tbxWord.Text == null) //This section test the classes with either input or preselected word(s)
-            {
-
-                var TestWord1 = new Difficulty("HARD", "positive", 8);
-                //DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
-            }
-            else
-            {
-                var Testword = new TakeWord("UNKNOWN", tbxWord.Text, tbxWord.Text.Length);
-                //DisplayWord(Testword.Letters, Testword.CodeWord);
-            }
+            var TestWord1 = new Difficulty("HARD", "positive", 8);
+            Radios(TestWord1.Letters.Length);
+            //DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
 
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnA_Click(object sender, EventArgs e)
         {
             ClrFormat();
             if (btnA.Font.Underline == true)
             {
-               
+
                 this.btnA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             }
             else
@@ -734,7 +717,7 @@ namespace Hangman
                 }
                 e.Handled = true;
             }
-         
+
         }
 
         private void btnWSub_Click(object sender, EventArgs e)
@@ -744,13 +727,37 @@ namespace Hangman
 
                 var TestWord1 = new Difficulty("HARD", "positive", 8);
                 DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
+                Radios(TestWord1.Letters.Length);
             }
             else
             {
-                var Testword = new TakeWord("UNKNOWN", tbxWord.Text, tbxWord.Text.Length);
-                DisplayWord(Testword.Letters, Testword.CodeWord);
+                if (tbxWord.Text.Length > 8) { MessageBox.Show("That is too big for this game.  Try again."); }  //test to see if it is too big.
+                else
+                {
+                    var Testword = new TakeWord("UNKNOWN", tbxWord.Text, tbxWord.Text.Length);
+                    DisplayWord(Testword.Letters, Testword.CodeWord);
+                    Radios(Testword.Letters.Length);
+                }
             }
         } //This is to test they classes and case changing of the word/letters FOR TESTING ONLY
+        public void Radios(int letters)
+        {
+            if (letters > 0 && letters < 5)
+            {
+                radEasy.Checked = true;
+                rad34.Checked = true;
 
+            }
+            else if (letters > 4 || letters < 7)
+            {
+                rad56.Checked = true;
+                radMed.Checked = true;
+            }
+            else
+            {
+                rad78.Checked = true;
+                radHard.Checked = true;
+            }
+        }
     }
 }

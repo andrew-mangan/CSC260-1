@@ -87,6 +87,7 @@
             this.btnWSub = new System.Windows.Forms.Button();
             this.tbxWord = new System.Windows.Forms.TextBox();
             this.btnGO = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.gpbSize.SuspendLayout();
             this.grbDiff.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -700,7 +701,7 @@
             this.btnWSub.Name = "btnWSub";
             this.btnWSub.Size = new System.Drawing.Size(150, 32);
             this.btnWSub.TabIndex = 46;
-            this.btnWSub.Text = "Word";
+            this.btnWSub.Text = "Test Word";
             this.btnWSub.UseVisualStyleBackColor = true;
             this.btnWSub.Click += new System.EventHandler(this.btnWSub_Click);
             // 
@@ -724,11 +725,22 @@
             this.btnGO.UseVisualStyleBackColor = true;
             this.btnGO.Click += new System.EventHandler(this.btnGO_Click);
             // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(598, 317);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(147, 36);
+            this.btnSubmit.TabIndex = 49;
+            this.btnSubmit.Text = "Submit Letter";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.btnGO);
             this.Controls.Add(this.tbxWord);
             this.Controls.Add(this.btnWSub);
@@ -829,6 +841,7 @@
         private System.Windows.Forms.Button btnWSub;
         private System.Windows.Forms.TextBox tbxWord;
         private System.Windows.Forms.Button btnGO;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
