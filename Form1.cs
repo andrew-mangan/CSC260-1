@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,10 +10,13 @@ namespace Hangman
 
     public partial class Form1 : Form
     {
+        char LetterSub; //global item
+        char[] GLetters; //global item
         public Form1()
         {
             InitializeComponent();
         }
+
 
         public class Program
         {
@@ -30,14 +34,7 @@ namespace Hangman
         }
 
         //constructors
-        public interface ICheckLetters //Check letters input by user against the CodeWord
-        {
-            string CodeWord { get; set; }
-            bool AllLetters { get; set; }
-            void PrintAllWords(string message);
-            bool IsWordCorrect(char[] ChkWord, string Word, bool done);
-
-        }
+     
 
 
         public abstract class Word
@@ -69,6 +66,7 @@ namespace Hangman
 
             public virtual void SpliceWord()
             {
+                CodeWord = CodeWord.ToUpper();
                 Letters = CodeWord.ToCharArray();
             }
 
@@ -79,6 +77,7 @@ namespace Hangman
             public TakeWord(string Difficulty, string CodeWord, int numletters) : base(Difficulty, CodeWord, numletters)
             {
                 SpliceWord();
+               
             }
             public override void SpliceWord()
             {
@@ -118,36 +117,39 @@ namespace Hangman
             }
 
         }
-        public class temporary : ICheckLetters
+        public class CheckWord
         {
-            public string CodeWord { get; set; }
-            public bool AllLetters { get; set; }
-            public void PrintAllWords(string message)
+           public char chkletter { get; set; }
+           
+           
+            public CheckWord(char chklet)
             {
-                Console.WriteLine(message);
+                chkletter  = chklet;
             }
-            public bool IsWordCorrect(char[] Letters, string Word, bool allboxes)
-            {
-                AllLetters = true;
-                return (false);
-            }
-            public temporary()
-            {
-                throw new NotImplementedException();
-            }
+
 
         }
 
-        public class SubmitLetter : temporary
+        public class SubmitLetter : CheckWord
         {
+            public bool IsletterTF;
+            protected char[] _chars;
             
-            public SubmitLetter(string codeword, bool allletters, string checkword)
+            public SubmitLetter(char chklet, char[] chars) : base(chklet)
             {
-                throw new NotImplementedException();
+                _chars = chars;
+                
+            }
+            public bool IsWordCorrect()
+            {
+                if (_chars.Contains(chkletter)) return true;
+                else
+                    return (false);
             }
         }
         public void DisplayWord(char[] letters, string word)
         {
+
             lblLet1.Visible = false;
             lblLet2.Visible = false;
             lblLet3.Visible = false;
@@ -253,14 +255,34 @@ namespace Hangman
 
         private void btnGO_Click(object sender, EventArgs e)
         {
-            var TestWord1 = new Difficulty("HARD", "positive", 8);
-            Radios(TestWord1.Letters.Length);
+            if (tbxWord.Text == null) //This section test the classes with either input or preselected word(s)
+            {
+
+                var TestWord1 = new Difficulty("HARD", "Bachelor", 8);
+                //DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
+                GLetters = TestWord1.Letters;
+                Radios(TestWord1.Letters.Length);
+            }
+            else
+            {
+                if (tbxWord.Text.Length > 8) { MessageBox.Show("That is too big for this game.  Try again."); }  //test to see if it is too big.
+                else
+                {
+                    var Testword = new TakeWord("UNKNOWN", tbxWord.Text, tbxWord.Text.Length);
+                    GLetters = Testword.Letters;
+                    //DisplayWord(Testword.Letters, Testword.CodeWord);
+                    Radios(Testword.Letters.Length);
+                }
+            }
+           
             //DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
-
+            ClrForGame();
         }
-
+  
+        
         private void btnA_Click(object sender, EventArgs e)
         {
+            LetterSub = 'A';
             ClrFormat();
             if (btnA.Font.Underline == true)
             {
@@ -274,6 +296,7 @@ namespace Hangman
         }
         private void btnB_Click(object sender, EventArgs e)
         {
+            LetterSub = 'B';
             ClrFormat();
             if (btnB.Font.Underline == true)
             {
@@ -286,6 +309,7 @@ namespace Hangman
         }
         private void btnC_Click(object sender, EventArgs e)
         {
+            LetterSub = 'C';
             ClrFormat();
             if (btnC.Font.Underline == true)
             {
@@ -298,6 +322,7 @@ namespace Hangman
         }
         private void btnD_Click(object sender, EventArgs e)
         {
+            LetterSub = 'D';
             ClrFormat();
             if (btnD.Font.Underline == true)
             {
@@ -310,6 +335,7 @@ namespace Hangman
         }
         private void btnE_Click(object sender, EventArgs e)
         {
+            LetterSub = 'E';
             ClrFormat();
             if (btnE.Font.Underline == true)
             {
@@ -322,6 +348,7 @@ namespace Hangman
         }
         private void btnF_Click(object sender, EventArgs e)
         {
+            LetterSub = 'F';
             ClrFormat();
             if (btnF.Font.Underline == true)
             {
@@ -330,10 +357,12 @@ namespace Hangman
             else
             {
                 this.btnF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                
             }
         }
         private void btnG_Click(object sender, EventArgs e)
         {
+            LetterSub = 'G';
             ClrFormat();
             if (btnG.Font.Underline == true)
             {
@@ -346,6 +375,7 @@ namespace Hangman
         }
         private void btnH_Click(object sender, EventArgs e)
         {
+            LetterSub = 'H';
             ClrFormat();
             if (btnH.Font.Underline == true)
             {
@@ -358,6 +388,7 @@ namespace Hangman
         }
         private void btnI_Click(object sender, EventArgs e)
         {
+            LetterSub = 'I';
             ClrFormat();
             if (btnI.Font.Underline == true)
             {
@@ -370,6 +401,7 @@ namespace Hangman
         }
         private void btnJ_Click(object sender, EventArgs e)
         {
+            LetterSub = 'J';
             ClrFormat();
             if (btnJ.Font.Underline == true)
             {
@@ -382,6 +414,7 @@ namespace Hangman
         }
         private void btnK_Click(object sender, EventArgs e)
         {
+            LetterSub = 'K';
             ClrFormat();
             if (btnK.Font.Underline == true)
             {
@@ -394,6 +427,7 @@ namespace Hangman
         }
         private void btnL_Click(object sender, EventArgs e)
         {
+            LetterSub = 'L';
             ClrFormat();
             if (btnL.Font.Underline == true)
             {
@@ -406,6 +440,7 @@ namespace Hangman
         }
         private void btnM_Click(object sender, EventArgs e)
         {
+            LetterSub = 'M';
             ClrFormat();
             if (btnM.Font.Underline == true)
             {
@@ -418,6 +453,7 @@ namespace Hangman
         }
         private void btnN_Click(object sender, EventArgs e)
         {
+            LetterSub = 'N';
             ClrFormat();
             if (btnN.Font.Underline == true)
             {
@@ -430,6 +466,7 @@ namespace Hangman
         }
         private void btnO_Click(object sender, EventArgs e)
         {
+            LetterSub = 'O';
             ClrFormat();
             if (btnO.Font.Underline == true)
             {
@@ -442,6 +479,7 @@ namespace Hangman
         }
         private void btnP_Click(object sender, EventArgs e)
         {
+            LetterSub = 'P';
             ClrFormat();
             if (btnP.Font.Underline == true)
             {
@@ -454,6 +492,7 @@ namespace Hangman
         }
         private void btnQ_Click(object sender, EventArgs e)
         {
+            LetterSub = 'Q';
             ClrFormat();
             if (btnQ.Font.Underline == true)
             {
@@ -466,6 +505,7 @@ namespace Hangman
         }
         private void btnR_Click(object sender, EventArgs e)
         {
+            LetterSub = 'R';
             ClrFormat();
             if (btnR.Font.Underline == true)
             {
@@ -478,6 +518,7 @@ namespace Hangman
         }
         private void btnS_Click(object sender, EventArgs e)
         {
+            LetterSub = 'S';
             ClrFormat();
             if (btnS.Font.Underline == true)
             {
@@ -490,6 +531,7 @@ namespace Hangman
         }
         private void btnT_Click(object sender, EventArgs e)
         {
+            LetterSub = 'T';
             ClrFormat();
             if (btnT.Font.Underline == true)
             {
@@ -502,6 +544,7 @@ namespace Hangman
         }
         private void btnU_Click(object sender, EventArgs e)
         {
+            LetterSub = 'U';
             ClrFormat();
             if (btnU.Font.Underline == true)
             {
@@ -514,6 +557,7 @@ namespace Hangman
         }
         private void btnV_Click(object sender, EventArgs e)
         {
+            LetterSub = 'V';
             ClrFormat();
             if (btnV.Font.Underline == true)
             {
@@ -526,6 +570,7 @@ namespace Hangman
         }
         private void btnW_Click(object sender, EventArgs e)
         {
+            LetterSub = 'W';
             ClrFormat();
             if (btnW.Font.Underline == true)
             {
@@ -538,6 +583,7 @@ namespace Hangman
         }
         private void btnX_Click(object sender, EventArgs e)
         {
+            LetterSub = 'X';
             ClrFormat();
             if (btnX.Font.Bold == true)
             {
@@ -550,6 +596,7 @@ namespace Hangman
         }
         private void btnY_Click(object sender, EventArgs e)
         {
+            LetterSub = 'Y';
             ClrFormat();
             if (btnY.Font.Underline == true)
             {
@@ -562,6 +609,7 @@ namespace Hangman
         }
         private void btnZ_Click(object sender, EventArgs e)
         {
+            LetterSub = 'Z';
             ClrFormat();
             if (btnZ.Font.Underline == true)
             {
@@ -600,6 +648,39 @@ namespace Hangman
             this.btnX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+
+            /*if (lblLet1.Visible == true) { lblLet1.Text = "_"; }
+            if (lblLet2.Visible == true) { lblLet2.Text = "_"; }
+            if (lblLet3.Visible == true) { lblLet3.Text = "_"; }
+            if (lblLet4.Visible == true) { lblLet4.Text = "_"; }
+            if (lblLet5.Visible == true) { lblLet5.Text = "_"; }
+            if (lblLet6.Visible == true) { lblLet6.Text = "_"; }
+            if (lblLet7.Visible == true) { lblLet7.Text = "_"; }
+            if (lblLet8.Visible == true) { lblLet8.Text = "_"; }*/
+           
+        }
+        private void ClrForGame()
+        {
+            if (lblLet1.Visible == true) { lblLet1.Text = "_"; }
+            if (lblLet2.Visible == true) { lblLet2.Text = "_"; }
+            if (lblLet3.Visible == true) { lblLet3.Text = "_"; }
+            if (lblLet4.Visible == true) { lblLet4.Text = "_"; }
+            if (lblLet5.Visible == true) { lblLet5.Text = "_"; }
+            if (lblLet6.Visible == true) { lblLet6.Text = "_"; }
+            if (lblLet7.Visible == true) { lblLet7.Text = "_"; }
+            if (lblLet8.Visible == true) { lblLet8.Text = "_"; }
+            ptb1.Visible = false;
+            ptb2.Visible = false;
+            ptb3.Visible = false;
+            ptb4.Visible = false;
+            ptb5.Visible = false;
+            ptb6.Visible = false;
+            ptb7.Visible = false;
+            ptb8.Visible = false;
+            ptb9.Visible = false;
+            ptb10.Visible = false;
+            ptb11.Visible = false;
+            
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -720,25 +801,10 @@ namespace Hangman
 
         }
 
-        private void btnWSub_Click(object sender, EventArgs e)
+        public void btnWSub_Click(object sender, EventArgs e)
         {
-            if (tbxWord.Text == null) //This section test the classes with either input or preselected word(s)
-            {
-
-                var TestWord1 = new Difficulty("HARD", "positive", 8);
-                DisplayWord(TestWord1.Letters, TestWord1.CodeWord);
-                Radios(TestWord1.Letters.Length);
-            }
-            else
-            {
-                if (tbxWord.Text.Length > 8) { MessageBox.Show("That is too big for this game.  Try again."); }  //test to see if it is too big.
-                else
-                {
-                    var Testword = new TakeWord("UNKNOWN", tbxWord.Text, tbxWord.Text.Length);
-                    DisplayWord(Testword.Letters, Testword.CodeWord);
-                    Radios(Testword.Letters.Length);
-                }
-            }
+            
+            
         } //This is to test they classes and case changing of the word/letters FOR TESTING ONLY
         public void Radios(int letters)
         {
@@ -748,7 +814,7 @@ namespace Hangman
                 rad34.Checked = true;
 
             }
-            else if (letters > 4 || letters < 7)
+            else if (letters > 4 && letters < 7)
             {
                 rad56.Checked = true;
                 radMed.Checked = true;
@@ -758,6 +824,30 @@ namespace Hangman
                 rad78.Checked = true;
                 radHard.Checked = true;
             }
+        }
+
+        public void btnSubmit_Click(object sender, EventArgs e)
+        {
+            //reset letters
+            //ClrFormat();
+
+                        
+            var  ChkLetter = new SubmitLetter(LetterSub, GLetters);
+
+
+            if (ChkLetter.IsWordCorrect() == true)
+            {
+                tbxWord.Text = Array.IndexOf(GLetters, LetterSub).ToString();
+                if (Array.IndexOf(GLetters, LetterSub) == 0) { lblLet1.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 1) { lblLet2.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 2) { lblLet3.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 3) { lblLet4.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 4) { lblLet5.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 5) { lblLet6.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 6) { lblLet7.Text = LetterSub.ToString(); }
+                if (Array.IndexOf(GLetters, LetterSub) == 7) { lblLet8.Text = LetterSub.ToString(); }
+            }
+        
         }
     }
 }

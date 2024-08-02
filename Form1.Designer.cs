@@ -197,7 +197,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.White;
+            this.groupBox3.BackColor = System.Drawing.Color.Silver;
             this.groupBox3.Controls.Add(this.ptb11);
             this.groupBox3.Controls.Add(this.ptb10);
             this.groupBox3.Controls.Add(this.ptb9);
@@ -734,6 +734,7 @@
             this.btnSubmit.TabIndex = 49;
             this.btnSubmit.Text = "Submit Letter";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // Form1
             // 
